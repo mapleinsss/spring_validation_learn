@@ -1,0 +1,86 @@
+GET {{url_prefix}}/get/test1
+
+###
+
+GET {{url_prefix}}/get/test2/-1
+
+###
+
+POST {{url_prefix}}/postForm/test1/
+
+###
+
+POST {{url_prefix}}/postJSON/test1/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "username": "ak"
+}
+
+###
+
+POST {{url_prefix}}/group/save/
+Content-Type: application/json
+
+{
+  "username": "Maple_ins",
+  "password": "123451"
+}
+
+###
+
+POST {{url_prefix}}/group/update/
+Content-Type: application/json
+
+{
+  "username": "Maple_ins",
+  "password": "123451"
+}
+
+###
+POST {{url_prefix}}/nest/save/
+Content-Type: application/json
+
+{
+  "username": "Maple_ins",
+  "password": "123451",
+  "friend": {
+    "username": "AngelLi"
+  }
+}
+
+###
+
+POST {{url_prefix}}/nest/update/
+Content-Type: application/json
+
+{
+  "id": 123,
+  "username": "Maple_ins",
+  "password": "123451",
+  "friend": {
+    "username": "AngelLi",
+    "id": 456,
+    "password": "helloWorld"
+  }
+}
+
+###
+
+POST {{url_prefix}}/self/save/
+Content-Type: application/json
+
+{
+  "id": 1,
+  "type": "interface"
+}
+
+###
+
+POST {{url_prefix}}/code/test1/
+Content-Type: application/json
+
+{
+  "id": 1
+}
